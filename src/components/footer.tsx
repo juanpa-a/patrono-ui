@@ -1,4 +1,4 @@
-import { Box, Divider, HStack, Icon, Text, VStack } from "@chakra-ui/react";
+import { Divider, HStack, Icon, Text, VStack } from "@chakra-ui/react";
 import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 
 export const Footer = () => {

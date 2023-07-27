@@ -65,41 +65,41 @@ export const ContractFormSteps = (handleChange: (x: any) => void) => [
     },
 ];
 
-const contractInfo = {
-    // property
-    propertyAddress: "",
-    propertyState: "",
-    propertyUse: "",
-    propertyIsFurnished: false,
-    propertyFurniture: [],
-    // landlord representative
-    landlordIsMoralPerson: false,
-    landlordName: "",
-    landlordGender: "",
-    landlordNationality: "",
-    landlordEmail: "",
-    landlordBirthday: 0,
-    // landlord moral
-    landlordMoralName: "",
-    landlordRFC: "",
-    // tenant
-    tenantName: "",
-    tenantEmail: "",
-    tenantGender: "",
-    tenantNationality: "",
-    tenantBirthday: 0,
-    // contract basic
-    contractStartDate: "",
-    contractEndDate: "",
-    paymentCycle: "",
-    paymentAmount: "",
-    paymentMethod: "",
-    guarenteeAmount: 0,
-    // contract custom
-    servicesAreIncluded: false,
-    mantainenceIsIncluded: false,
-    // customProhibitions: [],
-    // contractIsConfidential: false,
-    // thirdPartyConflictResolution: false,
-    hasGuarantor: false,
-};
+// const contractInfo = {
+//     // property
+//     propertyAddress: "",
+//     propertyState: "",
+//     propertyUse: "",
+//     propertyIsFurnished: false,
+//     propertyFurniture: [],
+//     // landlord representative
+//     landlordIsMoralPerson: false,
+//     landlordName: "",
+//     landlordGender: "",
+//     landlordNationality: "",
+//     landlordEmail: "",
+//     landlordBirthday: 0,
+//     // landlord moral
+//     landlordMoralName: "",
+//     landlordRFC: "",
+//     // tenant
+//     tenantName: "",
+//     tenantEmail: "",
+//     tenantGender: "",
+//     tenantNationality: "",
+//     tenantBirthday: 0,
+//     // contract basic
+//     contractStartDate: "",
+//     contractEndDate: "",
+//     paymentCycle: "",
+//     paymentAmount: "",
+//     paymentMethod: "",
+//     guarenteeAmount: 0,
+//     // contract custom
+//     servicesAreIncluded: false,
+//     mantainenceIsIncluded: false,
+//     // customProhibitions: [],
+//     // contractIsConfidential: false,
+//     // thirdPartyConflictResolution: false,
+//     hasGuarantor: false,
+// };

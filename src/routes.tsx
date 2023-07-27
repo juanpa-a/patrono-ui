@@ -3,7 +3,6 @@ import {
     Routes as BrowserRoutes,
     Navigate,
     Route,
-    useNavigate,
 } from "react-router-dom";
 import { Archive, Login, Landing, Desk } from "./pages";
 import { Container } from "./templates";
