@@ -1,5 +1,5 @@
 import { SignInButton, SignOutButton, useUser } from "@clerk/clerk-react";
-import { Grid, Text, VStack, Image } from "@chakra-ui/react";
+import { Grid, Text, VStack, Image, Box } from "@chakra-ui/react";
 import { Button } from "~/components";
 
 export const Login = () => {
@@ -10,15 +10,26 @@ export const Login = () => {
                 justifyContent={"space-between"}
                 spacing="128px"
                 maxW={"1080px"}
-                border={"1px solid red"}
+                h={"99vh"}
             >
-                <Grid px={240} templateColumns={"1fr 1fr"} mt={160}>
-                    <Image src="/wolf.svg" />
-                    <VStack justifyContent={"center"} spacing={12}>
+                <Grid
+                    templateColumns={"1fr 1fr"}
+                    mt={160}
+                    w={"full"}
+                    h={"full"}
+                >
+                    <Image
+                        boxSize={"full"}
+                        objectFit={"cover"}
+                        src="/loba.png"
+                    />
+
+                    <VStack justifyContent={"center"}>
                         <Text
                             fontSize={38}
                             fontWeight={700}
                             textTransform={"uppercase"}
+                            align={"center"}
                         >
                             {!user.isSignedIn
                                 ? "Regístrate gratis y configura tu contrato ideal."
