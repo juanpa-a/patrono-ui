@@ -1,5 +1,5 @@
 import { SignInButton, SignOutButton, useUser } from "@clerk/clerk-react";
-import { Grid, Text, VStack, Image, HStack } from "@chakra-ui/react";
+import { Grid, Text, VStack, Image } from "@chakra-ui/react";
 import { Button } from "~/components";
 
 export const Login = () => {
