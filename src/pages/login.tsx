@@ -11,6 +11,7 @@ export const Login = () => {
                 spacing="128px"
                 maxW={"1080px"}
                 h={"99vh"}
+                mb={16}
             >
                 <Grid
                     templateColumns={"1fr 1fr"}
