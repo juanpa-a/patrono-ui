@@ -48,7 +48,7 @@ export const Navbar = ({ onOpen }: Props) => {
                     <motion.div whileHover={{ scale: 1.2, fontWeight: 500 }}>
                         <Button
                             // bgColor={"rgba(224, 221, 207, 0)"}
-                            variant="ghost"
+                            variant="link"
                         >
                             <Text
                                 pointerEvents={"all"}
