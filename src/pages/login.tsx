@@ -23,7 +23,7 @@ export const Login = () => {
                         boxSize={"full"}
                         objectFit={"cover"}
                         src="/wolf.png"
-                        opacity={0.6}
+                        opacity={0.45}
                     />
 
                     <VStack justifyContent={"center"}>
@@ -34,8 +34,8 @@ export const Login = () => {
                             align={"center"}
                         >
                             {!user.isSignedIn
-                                ? "Bienvenido"
-                                : "hasta pronto"}
+                                ? "¡Bienvenido!"
+                                : "¡hasta pronto!"}
                         </Text>
 
                         {!user.isSignedIn ? (
