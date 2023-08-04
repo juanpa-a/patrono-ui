@@ -10,6 +10,7 @@ export const Login = () => {
                 justifyContent={"space-between"}
                 spacing="128px"
                 maxW={"1080px"}
+                border={"1px solid red"}
             >
                 <Grid px={240} templateColumns={"1fr 1fr"} mt={160}>
                     <Image src="/wolf.svg" />
