@@ -8,8 +8,8 @@ export const Footer = () => {
                 {/* <Image src="/legal-logo.svg" /> */}
                 <Divider my={"32px"} color="#f2f0ee" />
                 <Text color="#f2f0ee" fontSize={"14px"}>
-                    aude, hospes, contemnere opes et te quoque dignum | finge
-                    deo, rebusque veni non asper egenis. (Aen. 8. 364-5)
+                    <i>aude, hospes, contemnere opes et te quoque dignum | finge
+                    deo, rebusque veni non asper egenis. (Aen. 8. 364-5)</i>
                 </Text>
                 <Divider my={"32px"} color="#f2f0ee" />
                 <Grid w="full" gridTemplateColumns="1fr 1fr 1fr">
@@ -24,7 +24,7 @@ export const Footer = () => {
                             color="#f2f0ee"
                             align={"center"}
                         >
-                            <i>Condiciones de uso | Política de privacidad</i>
+                            Condiciones de uso | Política de privacidad
                         </Text>
                     </VStack>
                     <Text color="#f2f0ee" fontSize={"10px"} align={"end"}>
