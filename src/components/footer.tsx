@@ -24,7 +24,7 @@ export const Footer = () => {
                             color="#f2f0ee"
                             align={"center"}
                         >
-                            Condiciones de uso | Política de privacidad
+                            Condiciones de uso   Política de privacidad
                         </Text>
                     </VStack>
                     <Text color="#f2f0ee" fontSize={"10px"} align={"end"}>
