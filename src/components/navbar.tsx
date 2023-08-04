@@ -1,4 +1,4 @@
-import { Grid, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Button, Grid, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import { useUser } from "@clerk/clerk-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -46,14 +46,20 @@ export const Navbar = ({ onOpen }: Props) => {
             <Grid width="full" maxW="1080px" gridTemplateColumns="1fr 1fr 1fr">
                 <HStack>
                     <motion.div whileHover={{ scale: 1.2, fontWeight: 500 }}>
-                        <Text
-                            onClick={onOpen}
-                            fontWeight={300}
-                            fontSize="md"
-                            textTransform="uppercase"
+                        <Button
+                            // bgColor={"rgba(224, 221, 207, 0)"}
+                            variant="ghost"
                         >
-                            Menú
-                        </Text>
+                            <Text
+                                pointerEvents={"all"}
+                                onClick={onOpen}
+                                fontWeight={300}
+                                fontSize="md"
+                                textTransform="uppercase"
+                            >
+                                Menú
+                            </Text>
+                        </Button>
                     </motion.div>
                 </HStack>
 
