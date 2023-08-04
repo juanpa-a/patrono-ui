@@ -66,7 +66,7 @@ export const Landing = () => {
             <Box scrollSnapAlign="center">
                 <video
                     onClick={toggleMute}
-                    // autoPlay
+                    autoPlay
                     muted={isMuted}
                     loop
                     style={{
