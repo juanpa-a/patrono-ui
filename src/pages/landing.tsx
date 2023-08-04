@@ -74,7 +74,7 @@ export const Landing = () => {
                         height: "100vh",
                         objectFit: "cover",
                     }}
-                    src="https://firebasestorage.googleapis.com/v0/b/patrono.appspot.com/o/assets%2Fpromo.mp4?alt=media&token=1698542a-4294-480f-bdfd-0bbff9475a50"
+                    src="https://firebasestorage.googleapis.com/v0/b/patrono.appspot.com/o/assets%2FPATRONO%20VFINAL.mp4?alt=media&token=ed792ea3-866a-45b0-94ac-f97397e95554"
                 />
             </Box>
         </VStack>
