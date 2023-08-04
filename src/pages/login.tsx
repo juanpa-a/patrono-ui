@@ -1,5 +1,5 @@
 import { SignInButton, SignOutButton, useUser } from "@clerk/clerk-react";
-import { Grid, Text, VStack, Image } from "@chakra-ui/react";
+import { Grid, Text, VStack, Image, HStack } from "@chakra-ui/react";
 import { Button } from "~/components";
 
 export const Login = () => {
@@ -10,9 +10,16 @@ export const Login = () => {
                 <Grid px={240} templateColumns={"1fr 1fr"} mt={160}>
                     <Image src="/wolf.svg" />
                     <VStack justifyContent={"center"} spacing={12}>
-                        <Text fontSize={38} fontWeight={700}>
-                            CALIDAD QUE INSPIRA
+                        <Text
+                            fontSize={38}
+                            fontWeight={700}
+                            textTransform={"uppercase"}
+                        >
+                            {!user.isSignedIn
+                                ? "Regístrate gratis y configura tu contrato ideal."
+                                : "te esperamos pronto de regreso"}
                         </Text>
+
                         {!user.isSignedIn ? (
                             <SignInButton mode="modal">
                                 <Button text="Entrar" onClick={console.log} />
