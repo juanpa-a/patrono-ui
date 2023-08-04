@@ -6,7 +6,11 @@ export const Login = () => {
     const user = useUser();
     return (
         <>
-            <VStack justifyContent={"space-between"} spacing="128px">
+            <VStack
+                justifyContent={"space-between"}
+                spacing="128px"
+                maxW={"1080px"}
+            >
                 <Grid px={240} templateColumns={"1fr 1fr"} mt={160}>
                     <Image src="/wolf.svg" />
                     <VStack justifyContent={"center"} spacing={12}>
