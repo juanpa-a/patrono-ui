@@ -1,10 +1,4 @@
-import {
-    Divider,
-    HStack,
-    Icon,
-    Text,
-    VStack,
-} from "@chakra-ui/react";
+import { Divider, Grid, HStack, Icon, Text, VStack } from "@chakra-ui/react";
 import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 
 export const Footer = () => {
@@ -17,25 +11,26 @@ export const Footer = () => {
                     aude, hospes, contemnere opes et te quoque dignum | finge
                     deo, rebusque veni non asper egenis. (Aen. 8. 364-5)
                 </Text>
-                <Divider mt={"64px"} mb={"48px"} color="#f2f0ee"  />
-                <HStack w="full" justifyContent="space-between">
+                <Divider mt={"64px"} mb={"48px"} color="#f2f0ee" />
+                <Grid w="full" gridTemplateColumns="1fr 1fr 1fr">
                     <HStack>
                         <Icon as={FaYoutube} color="#f2f0ee" />
                         <Icon as={FaFacebook} color="#f2f0ee" />
                         <Icon as={FaInstagram} color="#f2f0ee" />
                     </HStack>
-                    <HStack spacing={18}>
-                        <Text fontSize={"10px"} color="#f2f0ee">
-                            Condiciones de uso
+                    <VStack spacing={18} align="center">
+                        <Text
+                            fontSize={"10px"}
+                            color="#f2f0ee"
+                            align={"center"}
+                        >
+                            Condiciones de uso | Política de privacidad
                         </Text>
-                        <Text fontSize={"10px"} color="#f2f0ee">
-                            Política de privacidad
-                        </Text>
-                    </HStack>
-                    <Text color="#f2f0ee" fontSize={"10px"}>
+                    </VStack>
+                    <Text color="#f2f0ee" fontSize={"10px"} align={"end"}>
                         © 2023 PATRONO. Todos los derechos reservados.
                     </Text>
-                </HStack>
+                </Grid>
             </VStack>
         </VStack>
     );
