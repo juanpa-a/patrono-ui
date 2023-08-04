@@ -8,14 +8,14 @@ export const Login = () => {
         <>
             <VStack justifyContent={"space-between"} spacing="128px">
                 <Grid px={240} templateColumns={"1fr 1fr"} mt={160}>
-                    <Image src="/big-head.png" />
+                    <Image src="/wolf.svg" />
                     <VStack justifyContent={"center"} spacing={12}>
                         <Text fontSize={38} fontWeight={700}>
                             CALIDAD QUE INSPIRA
                         </Text>
                         {!user.isSignedIn ? (
                             <SignInButton mode="modal">
-                                <Button text="ingresar" onClick={console.log} />
+                                <Button text="Entrar" onClick={console.log} />
                             </SignInButton>
                         ) : (
                             <SignOutButton>
@@ -27,7 +27,7 @@ export const Login = () => {
 
                 <Text>
                     Todos los datos proporcionados se encuentran sujetos a
-                    nuestra política de privacidad, puede acceder a ella{" "}
+                    nuestra política de privacidad, puedes acceder a ella{" "}
                     <u>aquí.</u>
                 </Text>
             </VStack>

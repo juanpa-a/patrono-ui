@@ -8,6 +8,7 @@ import {
     Image,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 type Props = {
@@ -17,10 +18,31 @@ type Props = {
 
 export const Drawer = ({ isOpen, onClose }: Props) => {
     const navigate = useNavigate();
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop =
+                window.pageYOffset || document.documentElement.scrollTop;
+            setIsScrolled(scrollTop > 0);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
         <ChakraDrawer placement={"left"} onClose={onClose} isOpen={isOpen}>
             <DrawerOverlay />
-            <DrawerContent bg={"#E7E4D8"}>
+            <DrawerContent 
+                // bg={"#E7E4D8"}
+                backgroundColor={
+                    isScrolled ? "rgba(224, 221, 207, 0.85)" : "rgba(224, 221, 207, 0.95)"
+                }
+                transition="background-color 0.4s ease"
+            >
                 <DrawerBody
                     display={"flex"}
                     flexDirection={"column"}

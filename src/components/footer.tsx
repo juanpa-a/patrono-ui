@@ -1,11 +1,18 @@
-import { Divider, HStack, Icon, Text, VStack } from "@chakra-ui/react";
+import { Divider, HStack, Icon, Text, VStack, Image } from "@chakra-ui/react";
 import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 
 export const Footer = () => {
     return (
         <VStack p={16} w="full" backgroundColor="#1E1E1E">
             <VStack w="full" maxW="1080px">
-                <Text color="#f2f0ee">
+                <Image
+                    src="/legal.svg"
+                    w={"68px"}
+                    color={"white"}
+                    fill="#E7E4D8"
+                />
+                <Divider mt={"64px"} mb={"48px"} color="#f2f0ee" />
+                <Text color="#f2f0ee" fontSize={"14px"}>
                     aude, hospes, contemnere opes et te quoque dignum | finge
                     deo, rebusque veni non asper egenis. (Aen. 8. 364-5)
                 </Text>
@@ -17,11 +24,15 @@ export const Footer = () => {
                         <Icon as={FaInstagram} color="#f2f0ee" />
                     </HStack>
                     <HStack spacing={18}>
-                        <Text color="#f2f0ee">Condiciones de uso</Text>
-                        <Text color="#f2f0ee">Política de privacidad</Text>
+                        <Text fontSize={"10px"} color="#f2f0ee">
+                            Condiciones de uso
+                        </Text>
+                        <Text fontSize={"10px"} color="#f2f0ee">
+                            Política de privacidad
+                        </Text>
                     </HStack>
-                    <Text color="#f2f0ee">
-                        © 2022 PATRONO. Todos los derechos reservados.
+                    <Text color="#f2f0ee" fontSize={"10px"}>
+                        © 2023 PATRONO. Todos los derechos reservados.
                     </Text>
                 </HStack>
             </VStack>

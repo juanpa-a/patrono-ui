@@ -29,14 +29,14 @@ export const Navbar = ({ onOpen }: Props) => {
     return (
         <VStack
             w="full"
-            h="95px"
+            h="90px"
             justifyContent="center"
             backgroundColor={
-                isScrolled ? "rgba(231, 228, 216, 0.6)" : "#E7E4D8"
+                isScrolled ? "rgba(224, 221, 207, 0.3)" : "rgba(224, 221, 207, 0.85)"
             }
-            position="fixed"
-            backdropFilter={"blur(8px)"}
             transition="background-color 0.4s ease"
+            position="fixed"
+            backdropFilter={"blur(80px)"}
             px="32px"
             zIndex={999}
         >
@@ -44,11 +44,11 @@ export const Navbar = ({ onOpen }: Props) => {
                 <HStack>
                     <Text
                         onClick={onOpen}
-                        fontWeight={400}
-                        fontSize="xl"
+                        fontWeight={300}
+                        fontSize="md"
                         textTransform="uppercase"
                     >
-                        Menu
+                        Menú
                     </Text>
                 </HStack>
 
@@ -63,8 +63,8 @@ export const Navbar = ({ onOpen }: Props) => {
                 <HStack justifyContent="end">
                     <Text
                         onClick={() => navigate("/auth")}
-                        fontWeight={400}
-                        fontSize="xl"
+                        fontWeight={300}
+                        fontSize="md"
                         textTransform="uppercase"
                     >
                         {user.isSignedIn ? "salir" : "entrar"}
