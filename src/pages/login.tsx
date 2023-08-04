@@ -22,7 +22,8 @@ export const Login = () => {
                     <Image
                         boxSize={"full"}
                         objectFit={"cover"}
-                        src="/loba.png"
+                        src="/wolf.png"
+                        opacity={0.6}
                     />
 
                     <VStack justifyContent={"center"}>
