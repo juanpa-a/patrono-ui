@@ -1,5 +1,6 @@
 import { Grid, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import { useUser } from "@clerk/clerk-react";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -32,7 +33,9 @@ export const Navbar = ({ onOpen }: Props) => {
             h="90px"
             justifyContent="center"
             backgroundColor={
-                isScrolled ? "rgba(224, 221, 207, 0.3)" : "rgba(224, 221, 207, 0.85)"
+                isScrolled
+                    ? "rgba(224, 221, 207, 0.3)"
+                    : "rgba(224, 221, 207, 0.85)"
             }
             transition="background-color 0.4s ease"
             position="fixed"
@@ -42,14 +45,16 @@ export const Navbar = ({ onOpen }: Props) => {
         >
             <Grid width="full" maxW="1080px" gridTemplateColumns="1fr 1fr 1fr">
                 <HStack>
-                    <Text
-                        onClick={onOpen}
-                        fontWeight={300}
-                        fontSize="md"
-                        textTransform="uppercase"
-                    >
-                        Menú
-                    </Text>
+                    <motion.div whileHover={{ scale: 1.2, fontWeight: 500 }}>
+                        <Text
+                            onClick={onOpen}
+                            fontWeight={300}
+                            fontSize="md"
+                            textTransform="uppercase"
+                        >
+                            Menú
+                        </Text>
+                    </motion.div>
                 </HStack>
 
                 <VStack>
@@ -62,14 +67,16 @@ export const Navbar = ({ onOpen }: Props) => {
                 </VStack>
 
                 <HStack justifyContent="end">
-                    <Text
-                        onClick={() => navigate("/auth")}
-                        fontWeight={300}
-                        fontSize="md"
-                        textTransform="uppercase"
-                    >
-                        {user.isSignedIn ? "salir" : "entrar"}
-                    </Text>
+                    <motion.div whileHover={{ scale: 1.2, fontWeight: 500 }}>
+                        <Text
+                            onClick={() => navigate("/auth")}
+                            fontWeight={300}
+                            fontSize="md"
+                            textTransform="uppercase"
+                        >
+                            {user.isSignedIn ? "salir" : "entrar"}
+                        </Text>
+                    </motion.div>
                 </HStack>
             </Grid>
         </VStack>
