@@ -34,8 +34,8 @@ export const Login = () => {
                             align={"center"}
                         >
                             {!user.isSignedIn
-                                ? "Regístrate gratis y configura tu contrato ideal."
-                                : "que chingue a su madre el america"}
+                                ? "Bienvenido"
+                                : "hasta pronto"}
                         </Text>
 
                         {!user.isSignedIn ? (
