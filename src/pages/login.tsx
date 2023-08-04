@@ -22,7 +22,7 @@ export const Login = () => {
                     <Image
                         boxSize={"full"}
                         objectFit={"cover"}
-                        src="/wolf.png"
+                        src={!user.isSignedIn ? "/wolf.png" : "woman.png"}
                         opacity={0.45}
                     />
 
@@ -50,7 +50,7 @@ export const Login = () => {
                     </VStack>
                 </Grid>
 
-                <Text>
+                <Text fontSize={"10px"}>
                     Todos los datos proporcionados se encuentran sujetos a
                     nuestra política de privacidad, puedes acceder a ella{" "}
                     <u>aquí.</u>
