@@ -46,10 +46,7 @@ export const Navbar = ({ onOpen }: Props) => {
             <Grid width="full" maxW="1080px" gridTemplateColumns="1fr 1fr 1fr">
                 <HStack>
                     <motion.div whileHover={{ scale: 1.2, fontWeight: 500 }}>
-                        <Button
-                            // bgColor={"rgba(224, 221, 207, 0)"}
-                            variant="ghost"
-                        >
+                        <Button variant="ghost">
                             <Text
                                 pointerEvents={"all"}
                                 onClick={onOpen}
@@ -74,14 +71,16 @@ export const Navbar = ({ onOpen }: Props) => {
 
                 <HStack justifyContent="end">
                     <motion.div whileHover={{ scale: 1.2, fontWeight: 500 }}>
-                        <Text
-                            onClick={() => navigate("/auth")}
-                            fontWeight={300}
-                            fontSize="md"
-                            textTransform="uppercase"
-                        >
-                            {user.isSignedIn ? "salir" : "entrar"}
-                        </Text>
+                        <Button variant="ghost">
+                            <Text
+                                onClick={() => navigate("/auth")}
+                                fontWeight={300}
+                                fontSize="md"
+                                textTransform="uppercase"
+                            >
+                                {user.isSignedIn ? "salir" : "entrar"}
+                            </Text>
+                        </Button>
                     </motion.div>
                 </HStack>
             </Grid>
