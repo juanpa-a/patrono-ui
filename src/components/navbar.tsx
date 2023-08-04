@@ -57,6 +57,7 @@ export const Navbar = ({ onOpen }: Props) => {
                         src="/logo.svg"
                         justifyContent="center"
                         onClick={() => navigate("/")}
+                        h={"68px"}
                     />
                 </VStack>
 
