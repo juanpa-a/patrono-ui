@@ -35,7 +35,7 @@ export const Login = () => {
                         >
                             {!user.isSignedIn
                                 ? "Regístrate gratis y configura tu contrato ideal."
-                                : "te esperamos pronto de regreso"}
+                                : "que chingue a su madre el america"}
                         </Text>
 
                         {!user.isSignedIn ? (
