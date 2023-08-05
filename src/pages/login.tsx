@@ -10,8 +10,8 @@ export const Login = () => {
                 justifyContent={"space-between"}
                 spacing="128px"
                 maxW={"1080px"}
-                h={"99vh"}
-                mb={16}
+                h={"100vh"}
+                pb={16}
             >
                 <Grid
                     templateColumns={"1fr 1fr"}
@@ -25,7 +25,6 @@ export const Login = () => {
                         src={!user.isSignedIn ? "/wolf.png" : "woman.png"}
                         opacity={0.45}
                     />
-
                     <VStack justifyContent={"center"}>
                         <Text
                             fontSize={38}
