@@ -15,14 +15,13 @@ export const Landing = () => {
     }, [user]);
 
     return (
-        <VStack spacing={0} scrollSnapType="y mandatory">
+        <VStack spacing={0}>
             <Box
                 h="100vh"
                 w="100vw"
                 backgroundImage="/bg.jpg"
                 backgroundRepeat="no-repeat"
                 backgroundSize="cover"
-                scrollSnapAlign="center"
             >
                 <VStack
                     spacing="85px"
@@ -45,8 +44,12 @@ export const Landing = () => {
                             color="#E7E4D8"
                             maxW="33vw"
                         >
-                            Introduciendo a <strong><i>Eneas</i></strong>, el contrato de arrendamiento
-                            que puedes configurar en línea en minutos.
+                            Introduciendo a{" "}
+                            <strong>
+                                <i>Eneas</i>
+                            </strong>
+                            , el contrato de arrendamiento que puedes configurar
+                            en línea en minutos.
                         </Text>
                     </VStack>
                     <HStack spacing="20px">
@@ -63,7 +66,7 @@ export const Landing = () => {
                     </HStack>
                 </VStack>
             </Box>
-            <Box scrollSnapAlign="center">
+            <Box>
                 <video
                     onClick={toggleMute}
                     autoPlay
