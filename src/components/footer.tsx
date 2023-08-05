@@ -1,17 +1,28 @@
-import { Divider, Grid, HStack, Icon, Text, VStack } from "@chakra-ui/react";
+import {
+    Divider,
+    Grid,
+    HStack,
+    Icon,
+    Text,
+    VStack,
+    Image,
+} from "@chakra-ui/react";
 import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 
 export const Footer = () => {
     return (
         <VStack p={16} w="full" backgroundColor="#1E1E1E">
             <VStack w="full" maxW="1080px" mb="15px">
-                {/* <Image src="/legal-logo.svg" /> */}
-                <Divider my={"32px"} color="#f2f0ee" />
+                <Image src="/legal-logo.png" h={29} />
+                <Divider my={"32px"} borderColor="#f2f0ee" borderWidth={"1px"} />
                 <Text color="#f2f0ee" fontSize={"14px"}>
-                    <i>aude, hospes, contemnere opes et te quoque dignum | finge
-                    deo, rebusque veni non asper egenis. (Aen. 8. 364-5)</i>
+                    <i>
+                        aude, hospes, contemnere opes et te quoque dignum |
+                        finge deo, rebusque veni non asper egenis. (Aen. 8.
+                        364-5)
+                    </i>
                 </Text>
-                <Divider my={"32px"} color="#f2f0ee" />
+                <Divider my={"32px"} borderColor="#f2f0ee" borderWidth={"1px"} />
                 <Grid w="full" gridTemplateColumns="1fr 1fr 1fr">
                     <HStack>
                         <Icon as={FaYoutube} color="#f2f0ee" />
