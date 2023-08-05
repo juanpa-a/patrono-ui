@@ -44,7 +44,7 @@ export const About = () => {
                             GRATIS
                         </Text>
                         <Text fontSize={12} color={"#E7E4D8"}>
-                            Por tiempo limitado
+                            *Por tiempo limitado.
                         </Text>
                     </VStack>
                     <Divider w={32} color={"#E7E4D8"} />
