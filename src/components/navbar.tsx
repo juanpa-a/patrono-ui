@@ -43,12 +43,8 @@ export const Navbar = ({ onOpen }: Props) => {
             px="32px"
             zIndex={999}
         >
-            <Grid
-                width="full"
-                maxW="1080px"
-                gridTemplateColumns="1fr 1fr 1fr"
-            >
-                <HStack>
+            <Grid width="full" maxW="1080px" gridTemplateColumns="1fr 1fr 1fr">
+                <HStack spacing={10}>
                     <motion.div whileHover={{ scale: 1.2, fontWeight: 500 }}>
                         <Button variant="unstyled">
                             <Text
@@ -59,6 +55,19 @@ export const Navbar = ({ onOpen }: Props) => {
                                 textTransform="uppercase"
                             >
                                 Menú
+                            </Text>
+                        </Button>
+                    </motion.div>
+
+                    <motion.div whileHover={{ scale: 1.2, fontWeight: 500 }}>
+                        <Button variant="unstyled">
+                            <Text
+                                onClick={() => navigate("/about")}
+                                fontWeight={300}
+                                fontSize="md"
+                                textTransform="uppercase"
+                            >
+                                nosotros
                             </Text>
                         </Button>
                     </motion.div>
