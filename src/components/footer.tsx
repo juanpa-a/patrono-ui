@@ -14,15 +14,23 @@ export const Footer = () => {
         <VStack p={16} w="full" backgroundColor="#1E1E1E">
             <VStack w="full" maxW="1080px" mb="15px">
                 <Image src="/legal-logo.png" h={29} />
-                <Divider my={"32px"} borderColor="#f2f0ee" borderWidth={"1px"} />
-                <Text color="#f2f0ee" fontSize={"14px"}>
+                <Divider
+                    my={"32px"}
+                    borderColor="#f2f0ee"
+                    borderWidth={"1px"}
+                />
+                <Text color="#f2f0ee" fontSize={"14px"} align={"center"}>
                     <i>
                         aude, hospes, contemnere opes et te quoque dignum |
                         finge deo, rebusque veni non asper egenis. (Aen. 8.
                         364-5)
                     </i>
                 </Text>
-                <Divider my={"32px"} borderColor="#f2f0ee" borderWidth={"1px"} />
+                <Divider
+                    my={"32px"}
+                    borderColor="#f2f0ee"
+                    borderWidth={"1px"}
+                />
                 <Grid w="full" gridTemplateColumns="1fr 1fr 1fr">
                     <HStack>
                         <Icon as={FaYoutube} color="#f2f0ee" />
