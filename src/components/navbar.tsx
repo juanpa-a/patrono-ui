@@ -43,7 +43,12 @@ export const Navbar = ({ onOpen }: Props) => {
             px="32px"
             zIndex={999}
         >
-            <Grid width="full" maxW="1080px" gridTemplateColumns="1fr 1fr 1fr">
+            <Grid
+                width="full"
+                maxW="1080px"
+                gridTemplateColumns="1fr 1fr 1fr"
+                border={"1px solid red"}
+            >
                 <HStack>
                     <motion.div whileHover={{ scale: 1.2, fontWeight: 500 }}>
                         <Button variant="unstyled">
