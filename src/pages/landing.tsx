@@ -61,7 +61,7 @@ export const Landing = () => {
                         <Button
                             text="Descubrir"
                             secondary
-                            onClick={console.log}
+                            onClick={() => navigate("/about")}
                         />
                     </HStack>
                 </VStack>

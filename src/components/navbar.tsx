@@ -58,19 +58,6 @@ export const Navbar = ({ onOpen }: Props) => {
                             </Text>
                         </Button>
                     </motion.div>
-
-                    <motion.div whileHover={{ scale: 1.2, fontWeight: 500 }}>
-                        <Button variant="unstyled">
-                            <Text
-                                onClick={() => navigate("/about")}
-                                fontWeight={300}
-                                fontSize="md"
-                                textTransform="uppercase"
-                            >
-                                nosotros
-                            </Text>
-                        </Button>
-                    </motion.div>
                 </HStack>
 
                 <VStack>
