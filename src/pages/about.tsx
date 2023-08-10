@@ -9,7 +9,7 @@ export const About = () => {
             h={"100vh"}
             justifyContent={"center"}
             bgImage={"/ebg.jpeg"}
-            mt={"90px"}
+            pt={"90px"}
         >
             <HStack maxW={"1080px"}>
                 <VStack align={"start"} spacing={8}>
