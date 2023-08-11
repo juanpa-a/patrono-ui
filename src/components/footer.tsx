@@ -30,7 +30,7 @@ export const Footer = () => {
                 >
                     <i>
                         {reveal
-                            ? "No dudes, huésped mío, en despreciar los bienes materiales Y sabe hacerte digno de aquel dios. No te avergüence esta pobreza."
+                            ? "No dudes, huésped mío, en despreciar los bienes materiales | Y sabe hacerte digno de aquel dios. No te avergüence esta pobreza."
                             : "aude, hospes, contemnere opes et te quoque dignum | finge deo, rebusque veni non asper egenis."}{" "}
                         (Aen. 8. 364-5)
                     </i>
