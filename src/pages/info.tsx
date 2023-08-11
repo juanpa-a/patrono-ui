@@ -22,26 +22,25 @@ export const Info = () => {
             image: "/big-head.png",
         },
         {
-            title: "calidad que inspira",
+            title: "TECNOLOGÍA QUE LIBERA",
             subtitle:
-                "La atención al detalle propia de instrumentos jurídicos de clase mundial.",
+                "La accesibilidad a la práctica legal que demandan nuestros tiempos.",
             description:
-                "Un contrato elaborado en patrono es más que un contrato. Es una obra de arte hecha posible gracias a la sinergía entre nuestros usuarios, tecnología y equipo de profesionistas altamente calificados para acelerar los procesos de nuestros clientes.",
-            image: "/bird.svg",
+                "Patrono fue diseñado con un solo fin: empoderar a sus usuarios para que puedan ejercitar sus derechos de forma directa, profesional y segura. En consecuencia, todo contrato en la plataforma puede ser configurado por cualquier persona (sin importar sus conocimientos o capacidades).",
+            image: "/shield.svg",
         },
         {
-            title: "calidad que inspira",
-            subtitle:
-                "La atención al detalle propia de instrumentos jurídicos de clase mundial.",
+            title: "ACOMPAÑAMIENTO QUE ASEGURA",
+            subtitle: "La vigilancia necesaria para que las cosas sucedan.",
             description:
-                "Un contrato elaborado en patrono es más que un contrato. Es una obra de arte hecha posible gracias a la sinergía entre nuestros usuarios, tecnología y equipo de profesionistas altamente calificados para acelerar los procesos de nuestros clientes.",
-            image: "/shield.svg",
+                "En Patrono sabemos que la gestión responsable es el antídoto más eficaz para combatir el deterioro del valor de un contrato. Es por eso que desarrollamos el primer observatorio digital de seguimiento legal gratuito de Iberoamérica, un espacio donde nuestros usuarios pueden supervisar el debido cumplimiento de las obligaciones pactadas en los contratos configurados en la plataforma.",
+            image: "/bird.svg",
         },
     ];
 
     const settings = {
         fade: true,
-        speed: 3500,
+        speed: 800,
     };
 
     const [slider, setSlider] = useState<Slider | null>(null);
@@ -85,16 +84,6 @@ export const Info = () => {
                 href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
             />
             <HStack>
-                <Text
-                    fontSize={"48px"}
-                    fontWeight={600}
-                    textTransform={"uppercase"}
-                    textAlign={"start"}
-                    w={"full"}
-                >
-                    calidad que inspira
-                </Text>
-
                 <HStack spacing={4}>
                     <Icon
                         as={FaArrowLeft}
@@ -184,7 +173,7 @@ function intToRoman(num: number): string {
     return result;
 }
 
-const Card = ({ subtitle, description, image }: CardProps) => {
+const Card = ({ title, subtitle, description, image }: CardProps) => {
     return (
         <VStack
             pt={"90px"}
@@ -192,6 +181,15 @@ const Card = ({ subtitle, description, image }: CardProps) => {
             alignContent={"center"}
             maxW={"1080px"}
         >
+            <Text
+                fontSize={"48px"}
+                fontWeight={600}
+                textTransform={"uppercase"}
+                textAlign={"start"}
+                w={"full"}
+            >
+                {title}
+            </Text>
             <HStack>
                 <VStack align={"start"} spacing={8} pr={32}>
                     <Text fontSize={24} fontWeight={400}>
