@@ -7,9 +7,12 @@ import {
     VStack,
     Image,
 } from "@chakra-ui/react";
+import { useState } from "react";
 import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 
 export const Footer = () => {
+    const [reveal, setReveal] = useState(false);
+
     return (
         <VStack p={16} w="full" backgroundColor="#1E1E1E">
             <VStack w="full" maxW="1080px" mb="15px">
@@ -19,11 +22,17 @@ export const Footer = () => {
                     borderColor="#f2f0ee"
                     borderWidth={"1px"}
                 />
-                <Text color="#f2f0ee" fontSize={"14px"} align={"center"}>
+                <Text
+                    color="#f2f0ee"
+                    fontSize={"14px"}
+                    align={"center"}
+                    onClick={() => setReveal(!reveal)}
+                >
                     <i>
-                        aude, hospes, contemnere opes et te quoque dignum |
-                        finge deo, rebusque veni non asper egenis. (Aen. 8.
-                        364-5)
+                        {reveal
+                            ? "No dudes, huésped mío, en despreciar los bienes materiales Y sabe hacerte digno de aquel dios. No te avergüence esta pobreza."
+                            : "aude, hospes, contemnere opes et te quoque dignum | finge deo, rebusque veni non asper egenis."}{" "}
+                        (Aen. 8. 364-5)
                     </i>
                 </Text>
                 <Divider

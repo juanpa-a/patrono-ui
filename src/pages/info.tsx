@@ -41,12 +41,7 @@ export const Info = () => {
 
     const settings = {
         fade: true,
-        infinite: true,
-        // autoplay: true,
-        speed: 500,
-        autoplaySpeed: 5000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        speed: 3500,
     };
 
     const [slider, setSlider] = useState<Slider | null>(null);
@@ -193,7 +188,6 @@ const Card = ({ subtitle, description, image }: CardProps) => {
     return (
         <VStack
             pt={"90px"}
-            p={16}
             justifyContent={"center"}
             alignContent={"center"}
             maxW={"1080px"}
