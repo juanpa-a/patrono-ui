@@ -1,6 +1,7 @@
 import { HStack, Text, VStack, Image, Divider } from "@chakra-ui/react";
 import { Button } from "~/components";
 
+
 export const About = () => {
     return (
         <VStack
