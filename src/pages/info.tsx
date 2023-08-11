@@ -27,14 +27,14 @@ export const Info = () => {
                 "La accesibilidad a la práctica legal que demandan nuestros tiempos.",
             description:
                 "Patrono fue diseñado con un solo fin: empoderar a sus usuarios para que puedan ejercitar sus derechos de forma directa, profesional y segura. En consecuencia, todo contrato en la plataforma puede ser configurado por cualquier persona (sin importar sus conocimientos o capacidades).",
-            image: "/shield.svg",
+            image: "/bird.svg",
         },
         {
             title: "ACOMPAÑAMIENTO QUE ASEGURA",
             subtitle: "La vigilancia necesaria para que las cosas sucedan.",
             description:
                 "En Patrono sabemos que la gestión responsable es el antídoto más eficaz para combatir el deterioro del valor de un contrato. Es por eso que desarrollamos el primer observatorio digital de seguimiento legal gratuito de Iberoamérica, un espacio donde nuestros usuarios pueden supervisar el debido cumplimiento de las obligaciones pactadas en los contratos configurados en la plataforma.",
-            image: "/bird.svg",
+            image: "/shield.svg",
         },
     ];
 
