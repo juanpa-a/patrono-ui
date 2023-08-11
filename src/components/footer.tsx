@@ -9,9 +9,11 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
     const [reveal, setReveal] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <VStack p={16} w="full" backgroundColor="#1E1E1E">
@@ -42,7 +44,15 @@ export const Footer = () => {
                 />
                 <Grid w="full" gridTemplateColumns="1fr 1fr 1fr">
                     <HStack>
-                        <Icon as={FaYoutube} color="#f2f0ee" />
+                        <Icon
+                            as={FaYoutube}
+                            color="#f2f0ee"
+                            onClick={() => {
+                                navigate(
+                                    "https://www.youtube.com/channel/UCsed8AM55Uo02GwhrQZ1wcw"
+                                );
+                            }}
+                        />
                         <Icon as={FaFacebook} color="#f2f0ee" />
                         <Icon as={FaInstagram} color="#f2f0ee" />
                     </HStack>
