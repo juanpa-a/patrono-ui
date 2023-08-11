@@ -41,13 +41,9 @@ export const Footer = () => {
                 />
                 <Grid w="full" gridTemplateColumns="1fr 1fr 1fr">
                     <HStack>
-                        <Icon
-                            as={FaYoutube}
-                            color="#f2f0ee"
-                            onClick={() => {
-                                window.location = "https://www.youtube.com/channel/UCsed8AM55Uo02GwhrQZ1wcw"
-                            }}
-                        />
+                        <a href="https://www.youtube.com/channel/UCsed8AM55Uo02GwhrQZ1wcw">
+                            <Icon as={FaYoutube} color="#f2f0ee" />
+                        </a>
                         <Icon as={FaFacebook} color="#f2f0ee" />
                         <Icon as={FaInstagram} color="#f2f0ee" />
                     </HStack>
