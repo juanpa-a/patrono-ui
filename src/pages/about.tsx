@@ -15,7 +15,7 @@ export const About = () => {
         <VStack
             bg={"#1e1e1e"}
             w={"100vw"}
-            minHh={"100vh"}
+            minH={"100vh"}
             justifyContent={"center"}
             bgImage={"/ebg.jpeg"}
             pt={"90px"}
