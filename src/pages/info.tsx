@@ -113,22 +113,23 @@ export const Info = () => {
                     />
                 </HStack>
             </HStack>
-
-            <Slider {...settings} ref={(slider) => setSlider(slider)}>
-                {config.map(
-                    ({ title, subtitle, description, image }, index) => {
-                        return (
-                            <Card
-                                title={title}
-                                subtitle={subtitle}
-                                description={description}
-                                image={image}
-                                page={index}
-                            />
-                        );
-                    }
-                )}
-            </Slider>
+            <Box>
+                <Slider {...settings} ref={(slider) => setSlider(slider)}>
+                    {config.map(
+                        ({ title, subtitle, description, image }, index) => {
+                            return (
+                                <Card
+                                    title={title}
+                                    subtitle={subtitle}
+                                    description={description}
+                                    image={image}
+                                    page={index}
+                                />
+                            );
+                        }
+                    )}
+                </Slider>
+            </Box>
 
             <Box w={"full"} position={"absolute"} bottom={16}>
                 <HStack alignItems={"end"}>

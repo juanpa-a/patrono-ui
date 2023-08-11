@@ -1,8 +1,16 @@
-import { HStack, Text, VStack, Image, Divider } from "@chakra-ui/react";
+import {
+    HStack,
+    Text,
+    VStack,
+    Image,
+    Divider,
+    Button as CButton,
+} from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "~/components";
 
-
 export const About = () => {
+    const navigate = useNavigate();
     return (
         <VStack
             bg={"#1e1e1e"}
@@ -25,12 +33,12 @@ export const About = () => {
                     <Divider w={32} color={"#E7E4D8"} />
                     <VStack spacing={4}>
                         <Text color={"#E7E4D8"} fontSize={16}>
-                            <i>Eneas</i> © es el contrato de arrendamiento que hasta un
-                            cavernícola puede configurar de forma sencilla,
-                            profesional y segura. Déjate llevar por nuestra
-                            potente tecnología y da forma a tu contrato ideal
-                            para arrendar fincas habitacionales, comerciales,
-                            industriales o rústicas.
+                            <i>Eneas</i> © es el contrato de arrendamiento que
+                            hasta un cavernícola puede configurar de forma
+                            sencilla, profesional y segura. Déjate llevar por
+                            nuestra potente tecnología y da forma a tu contrato
+                            ideal para arrendar fincas habitacionales,
+                            comerciales, industriales o rústicas.
                         </Text>
                         <Text color={"#E7E4D8"} fontSize={16}>
                             Recuerda, basta con que respondas unas cuantas
@@ -52,10 +60,15 @@ export const About = () => {
                     <Divider w={32} color={"#E7E4D8"} />
                     <VStack align={"start"} mt={12}>
                         <Button text="configurar" onClick={console.log} />
-                        <Text fontSize={10} color={"#E7E4D8"}>
-                            ¿Aún no te decides? Conoce el ADN de nuestros
-                            contratos aquí
-                        </Text>
+                        <CButton
+                            variant="unstyled"
+                            onClick={() => navigate("/info")}
+                        >
+                            <Text fontSize={10} color={"#E7E4D8"}>
+                                ¿Aún no te decides? Conoce el ADN de nuestros
+                                contratos <u>aquí</u>
+                            </Text>
+                        </CButton>
                     </VStack>
                 </VStack>
                 <Image
