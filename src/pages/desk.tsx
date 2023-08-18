@@ -160,7 +160,7 @@ export const Desk = () => {
                 <VStack pt="140px">
                     {activeStep < contractSteps.length - 1 ? (
                         <>
-                            <Stack
+                            {activeStep ? <Stack
                                 spacing={5}
                                 border="1px solid #FA7200"
                                 w="100%"
@@ -175,7 +175,7 @@ export const Desk = () => {
                                     }
                                     bgColor="#E7E4D8"
                                 />
-                            </Stack>
+                            </Stack> : null}
                             <AnimatePresence mode="wait">
                                 <FormStepper
                                     isDirty={isDirty}
