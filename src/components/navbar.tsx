@@ -30,7 +30,7 @@ export const Navbar = ({ onOpen }: Props) => {
     return (
         <VStack
             w="full"
-            h="90px"
+            h="70px"
             justifyContent="center"
             backgroundColor={
                 isScrolled
@@ -65,7 +65,7 @@ export const Navbar = ({ onOpen }: Props) => {
                         src="/logo.svg"
                         justifyContent="center"
                         onClick={() => navigate("/")}
-                        h={"68px"}
+                        h={"54px"}
                     />
                 </VStack>
 
