@@ -197,7 +197,7 @@ export const Desk = () => {
                 <HStack alignItems={"end"}>
                     <VStack alignItems={"start"} w={"full"}>
                         <Text textTransform={"uppercase"} fontWeight={700} color="#f2f0ee">
-                            patrono // 2023
+                            Patrono // 2023
                         </Text>
                         <Divider borderColor={"#FA7200"} />
                     </VStack>

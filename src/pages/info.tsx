@@ -18,7 +18,7 @@ export const Info = () => {
             subtitle:
                 "La atención al detalle propia de instrumentos jurídicos de clase mundial.",
             description:
-                "Un contrato elaborado en patrono es más que un contrato. Es una obra de arte hecha posible gracias a la sinergía entre nuestros usuarios, tecnología y equipo de profesionistas altamente calificados para acelerar los procesos de nuestros clientes.",
+                "Un contrato elaborado en Patrono es más que un contrato. Es una obra de arte hecha posible gracias a la sinergía entre nuestros usuarios, tecnología y equipo de profesionistas altamente calificados para acelerar los procesos de nuestros clientes.",
             image: "/big-head.png",
         },
         {
@@ -119,7 +119,7 @@ export const Info = () => {
                 <HStack alignItems={"end"}>
                     <VStack alignItems={"start"} w={"full"}>
                         <Text textTransform={"uppercase"} fontWeight={700}>
-                            patrono // 2023
+                            Patrono // 2023
                         </Text>
                         <Divider borderColor={"#FA7200"} />
                     </VStack>

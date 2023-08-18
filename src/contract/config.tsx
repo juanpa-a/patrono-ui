@@ -27,7 +27,7 @@ export const ContractFormSteps = (handleChange: (x: any) => void) => [
                 <TextField
                     text="¿Como quieres llamar a este contrato?"
                     label="contractName"
-                    placeholder="Mi contrato con patrono"
+                    placeholder="Mi contrato con Patrono"
                     setValue={handleChange}
                     dark={true}
                 />
