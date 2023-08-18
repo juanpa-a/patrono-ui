@@ -58,7 +58,7 @@ export const About = () => {
                         </Text>
                     </VStack>
                     <Divider w={32} color={"#E7E4D8"} />
-                    <VStack align={"start"} mt={12}>
+                    <VStack align={"start"} >
                         <Button text="configurar" onClick={console.log} />
                         <CButton
                             variant="unstyled"
