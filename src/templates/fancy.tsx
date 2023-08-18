@@ -7,7 +7,7 @@ type Props = {
 
 export const Fancy = ({ children }: Props) => {
     return (
-        <VStack w="100vw">
+        <VStack w="100vw" zIndex={999}>
             {children}
         </VStack>
     );
