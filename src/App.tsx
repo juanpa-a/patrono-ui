@@ -13,6 +13,11 @@ const theme = extendTheme({
             },
         },
     },
+    colors: {
+        orange: {
+            500: "#FA7200",
+        },
+    },
 });
 
 export const App = () => {

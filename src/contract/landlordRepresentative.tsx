@@ -9,7 +9,7 @@ export const LandlordRepresentative = ({
 }) => {
     return (
         <Box minW={"33vw"}>
-            <Text fontWeight={800} fontSize={36}>
+            <Text fontWeight={800} fontSize={36} color="#f2f0ee">
                 PROPIETARIO
             </Text>
             <section className="w-full">
@@ -18,6 +18,7 @@ export const LandlordRepresentative = ({
                     label="landlordRepresentativeName"
                     placeholder="Andrew"
                     setValue={handleChange}
+                    dark
                 />
                 <SelectField
                     label="landlordRepresentativeGender"
@@ -27,6 +28,7 @@ export const LandlordRepresentative = ({
                         { value: "MALE", text: "Masculino" },
                         { value: "FEMALE", text: "Femenino" },
                     ]}
+                    dark
                 />
                 <SelectField
                     label="landlordIsMoralPerson"
@@ -36,12 +38,14 @@ export const LandlordRepresentative = ({
                         { value: "true", text: "Si" },
                         { value: "false", text: "No" },
                     ]}
+                    dark
                 />
                 <SelectField
                     label="landlordNationality"
                     text="Nacionalidad"
                     onChange={handleChange}
                     options={[{ value: "MX", text: "México" }]}
+                    dark
                 />
             </section>
         </Box>

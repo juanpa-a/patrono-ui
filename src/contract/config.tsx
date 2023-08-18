@@ -12,11 +12,11 @@ export const ContractFormSteps = (handleChange: (x: any) => void) => [
     {
         form: (
             <VStack spacing={4} minW={"33vw"}>
-                <Text mb={8} fontWeight={800} fontSize={36}>
+                <Text mb={8} fontWeight={800} fontSize={36} color="#f2f0ee">
                     CONTRATO ENEAS
                 </Text>
                 <Image src="/olive.svg" />
-                <Text fontSize={20}>
+                <Text fontSize={20} color="#f2f0ee">
                     El contrato de arrendamiento automatizado más poderoso del
                     mercado.
                 </Text>
@@ -29,6 +29,7 @@ export const ContractFormSteps = (handleChange: (x: any) => void) => [
                     label="contractName"
                     placeholder="Mi contrato con patrono"
                     setValue={handleChange}
+                    dark={true}
                 />
             </VStack>
         ),

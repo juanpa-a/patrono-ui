@@ -8,7 +8,7 @@ export const Tenant = ({
 }) => {
     return (
         <Box minW={"33vw"}>
-            <Text fontWeight={800} fontSize={36}>
+            <Text fontWeight={800} fontSize={36} color="#f2f0ee">
                 INQUILINO
             </Text>
             <section className="w-full">
@@ -17,12 +17,14 @@ export const Tenant = ({
                     label="tenantName"
                     placeholder="Pedro"
                     setValue={handleChange}
+                    dark
                 />
                 <TextField
                     text="Email"
                     label="tenantEmail"
                     placeholder="pedro@patrono.mx"
                     setValue={handleChange}
+                    dark
                 />
                 <SelectField
                     label="tenantGender"
@@ -32,12 +34,14 @@ export const Tenant = ({
                         { value: "MALE", text: "Masculino" },
                         { value: "FEMALE", text: "Femenino" },
                     ]}
+                    dark
                 />
                 <SelectField
                     label="tenantNationality"
                     text="Nacionalidad"
                     onChange={handleChange}
                     options={[{ value: "MX", text: "México" }]}
+                    dark
                 />
             </section>
         </Box>

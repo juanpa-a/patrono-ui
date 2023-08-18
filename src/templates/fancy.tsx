@@ -1,5 +1,5 @@
-import { Box, HStack, useBreakpointValue } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { VStack } from "@chakra-ui/react";
+// import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
 type Props = {
@@ -7,20 +7,20 @@ type Props = {
 };
 
 export const Fancy = ({ children }: Props) => {
-    const isDesktop = useBreakpointValue({ base: false, lg: true });
-    const animations = {
-        lf: {
-            hidden: { opacity: 0, x: -100 },
-            visible: { opacity: 1, x: 0 },
-        },
-        rg: {
-            hidden: { opacity: 0, x: 100 },
-            visible: { opacity: 1, x: 0 },
-        },
-    };
+    // const isDesktop = useBreakpointValue({ base: false, lg: true });
+    // const animations = {
+    //     lf: {
+    //         hidden: { opacity: 0, x: -100 },
+    //         visible: { opacity: 1, x: 0 },
+    //     },
+    //     rg: {
+    //         hidden: { opacity: 0, x: 100 },
+    //         visible: { opacity: 1, x: 0 },
+    //     },
+    // };
     return (
-        <HStack>
-            <Box display={isDesktop ? "block" : "none"}>
+        <VStack w="100vw" minH="100vh">
+            {/* <Box display={isDesktop ? "block" : "none"}>
                 <motion.img
                     src="lf.svg"
                     alt="Left Arrow"
@@ -29,9 +29,9 @@ export const Fancy = ({ children }: Props) => {
                     animate="visible"
                     transition={{ duration: 1.5, ease: "easeIn" }}
                 />
-            </Box>
+            </Box> */}
             {children}
-            <Box display={isDesktop ? "block" : "none"}>
+            {/* <Box display={isDesktop ? "block" : "none"}>
                 <motion.img
                     src="rg.svg"
                     alt="Left Arrow"
@@ -40,7 +40,7 @@ export const Fancy = ({ children }: Props) => {
                     animate="visible"
                     transition={{ duration: 1.5, ease: "easeIn" }}
                 />
-            </Box>
-        </HStack>
+            </Box> */}
+        </VStack>
     );
 };

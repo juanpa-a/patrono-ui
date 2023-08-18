@@ -8,7 +8,7 @@ export const CustomConfig = ({
 }) => {
     return (
         <Box minW={"33vw"}>
-            <Text fontWeight={800} fontSize={36}>
+            <Text fontWeight={800} fontSize={36} color="#f2f0ee">
                 YA CASI TERMINAMOS
             </Text>
             <section className="w-full">
@@ -20,6 +20,7 @@ export const CustomConfig = ({
                         { value: "true", text: "Si" },
                         { value: "false", text: "No" },
                     ]}
+                    dark
                 />
                 <SelectField
                     text="El mantenimiento esta incluido?"
@@ -29,6 +30,7 @@ export const CustomConfig = ({
                         { value: "true", text: "Si" },
                         { value: "false", text: "No" },
                     ]}
+                    dark
                 />
                 <SelectField
                     text="Hay fiador?"
@@ -38,6 +40,7 @@ export const CustomConfig = ({
                         { value: "true", text: "Si" },
                         { value: "false", text: "No" },
                     ]}
+                    dark
                 />
                 {/* <TextField
           text=""

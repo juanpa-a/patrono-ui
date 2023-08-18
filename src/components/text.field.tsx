@@ -6,6 +6,7 @@ type TextFieldProps = {
     placeholder?: string;
     isPassword?: boolean;
     setValue: (x: any) => void;
+    dark?: boolean;
 };
 
 export const TextField = ({
@@ -14,19 +15,25 @@ export const TextField = ({
     placeholder,
     isPassword = false,
     setValue,
+    dark = false,
 }: TextFieldProps) => {
     return (
         <FormControl my={8} w="full">
-            <FormLabel mb={2} fontSize="sm" fontWeight="medium">
+            <FormLabel
+                mb={2}
+                fontSize="sm"
+                fontWeight="medium"
+                color={dark ? "#f2f0ee" : ""}
+            >
                 <strong>{text}</strong>
             </FormLabel>
             <Input
                 name={label}
                 type={isPassword ? "password" : "text"}
                 borderRadius="full"
-                borderWidth={2}
-                borderColor="#afaca5"
-                bg="#f2f0ee"
+                borderWidth={3}
+                borderColor="#96938c"
+                bg={dark ? "#E7E4D8" : "#f2f0ee"}
                 p={2}
                 px="15px"
                 placeholder={placeholder}

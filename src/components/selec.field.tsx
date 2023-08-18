@@ -5,9 +5,16 @@ type Props = {
     label: string;
     options: Array<{ text: string; value: string }>;
     onChange: (s: any) => void;
+    dark?: boolean;
 };
 
-export const SelectField = ({ label, options, onChange, text }: Props) => {
+export const SelectField = ({
+    label,
+    options,
+    onChange,
+    text,
+    dark = false,
+}: Props) => {
     return (
         <FormControl my={4}>
             <FormLabel
@@ -15,7 +22,7 @@ export const SelectField = ({ label, options, onChange, text }: Props) => {
                 mb={2}
                 fontSize="sm"
                 fontWeight="medium"
-                color="gray.900"
+                color={dark ? "#f2f0ee" : "gray.900"}
             >
                 <strong>{text}</strong>
             </FormLabel>
@@ -23,10 +30,10 @@ export const SelectField = ({ label, options, onChange, text }: Props) => {
                 id={label}
                 name={label}
                 rounded="full"
-                borderWidth={2}
+                borderWidth={3}
+                borderColor="#96938c"
                 fontSize="sm"
-                borderColor="#afaca5"
-                bg="#f2f0ee"
+                bg={dark ? "#E7E4D8" : "#f2f0ee" }
                 onChange={(event) => onChange(event.target.value)}
             >
                 <option value="" disabled>

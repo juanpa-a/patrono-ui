@@ -8,7 +8,7 @@ export const BasicConfig = ({
 }) => {
     return (
         <Box minW={"33vw"}>
-            <Text fontWeight={800} fontSize={36}>
+            <Text fontWeight={800} fontSize={36} color="#f2f0ee">
                 CONFIGURA TU CONTRATO
             </Text>
             <section className="w-full">
@@ -17,12 +17,14 @@ export const BasicConfig = ({
                     label="contractStartDate"
                     placeholder="hoy"
                     setValue={handleChange}
+                    dark
                 />
                 <TextField
                     text="Fecha de fin del contrato"
                     label="contractEndDate"
                     placeholder="hoy"
                     setValue={handleChange}
+                    dark
                 />
                 <SelectField
                     label="paymentCycle"
@@ -32,12 +34,14 @@ export const BasicConfig = ({
                         { value: "biweekly", text: "quincenal" },
                         { value: "monthly", text: "mensual" },
                     ]}
+                    dark
                 />
                 <TextField
                     text="Monto de la renta"
                     label="paymentAmount"
                     placeholder="$5,000"
                     setValue={handleChange}
+                    dark
                 />
                 <SelectField
                     text="Metodo de pago"
@@ -47,12 +51,14 @@ export const BasicConfig = ({
                         { value: "CASH", text: "efectivo" },
                         { value: "WIRE", text: "transferencia" },
                     ]}
+                    dark
                 />
                 <TextField
                     text="Cantidad de deposito de garantia"
                     label="paymentGuarantee"
                     placeholder="$15,000"
                     setValue={handleChange}
+                    dark
                 />
             </section>
         </Box>

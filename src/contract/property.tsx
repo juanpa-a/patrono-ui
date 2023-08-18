@@ -9,7 +9,7 @@ export const Property = ({
 }) => {
     return (
         <Box minW={"33vw"}>
-            <Text fontWeight={800} fontSize={36}>
+            <Text fontWeight={800} fontSize={36} color="#f2f0ee">
                 CONTRATO ENEAS
             </Text>
             <section className="w-full">
@@ -18,18 +18,21 @@ export const Property = ({
                     label="propertyStreet"
                     placeholder="Av. Siempreviva"
                     setValue={handleChange}
+                    dark
                 />
                 <TextField
                     text="Numero exterior"
                     label="propertyOuterNumber"
                     placeholder="2150"
                     setValue={handleChange}
+                    dark
                 />
                 <TextField
                     text="Numero interior"
                     label="propertyInnerNumber"
                     placeholder="42-B"
                     setValue={handleChange}
+                    dark
                 />
                 <SelectField
                     label="propertyState"
@@ -40,6 +43,7 @@ export const Property = ({
                         { value: "MID", text: "Regular" },
                         { value: "GOOD", text: "Bueno" },
                     ]}
+                    dark
                 />
                 <SelectField
                     label="propertyUse"
@@ -49,6 +53,7 @@ export const Property = ({
                         { value: "RESIDENTIAL", text: "Residencial" },
                         { value: "COMERCIAL", text: "Comercial" },
                     ]}
+                    dark
                 />
                 <SelectField
                     label="propertyIsFurnished"
@@ -58,6 +63,7 @@ export const Property = ({
                         { value: "false", text: "No" },
                         { value: "true", text: "Si" },
                     ]}
+                    dark
                 />
             </section>
         </Box>
