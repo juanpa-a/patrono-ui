@@ -164,6 +164,7 @@ export const Desk = () => {
                                 spacing={5}
                                 border="1px solid #FA7200"
                                 w="100%"
+                                borderRadius="full"
                             >
                                 <Progress
                                     colorScheme="orange"
@@ -174,6 +175,7 @@ export const Desk = () => {
                                         contractSteps.length
                                     }
                                     bgColor="#E7E4D8"
+                                    borderRadius="full"
                                 />
                             </Stack> : null}
                             <AnimatePresence mode="wait">
