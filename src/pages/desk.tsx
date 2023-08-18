@@ -154,7 +154,7 @@ export const Desk = () => {
             backdropFilter={"blur(80px)"}
             position={"relative"}
             // w="100vw"
-            // h="100vh"
+            minH="100vh"
         >
             <Fancy>
                 <VStack pt="140px">
@@ -289,7 +289,7 @@ const FormStepper = ({
             .catch(() => console.log(""));
     }, [controls]);
     return (
-        <VStack p={16} minH={"100vh"} minW={"50vw"}>
+        <VStack p={16}  minW={"50vw"}>
             <AnimatePresence mode="wait">
                 <motion.div
                     key={activeStep}
