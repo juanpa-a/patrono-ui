@@ -33,7 +33,7 @@ export const About = () => {
                     <Divider w={32} color={"#E7E4D8"} />
                     <VStack spacing={4}>
                         <Text color={"#E7E4D8"} fontSize={16}>
-                            <i>Eneas</i> © es el contrato de arrendamiento que
+                            <i>Eneas</i>© es el contrato de arrendamiento que
                             hasta un cavernícola puede configurar de forma
                             sencilla, profesional y segura. Déjate llevar por
                             nuestra potente tecnología y da forma a tu contrato
