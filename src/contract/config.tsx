@@ -15,15 +15,15 @@ export const ContractFormSteps = (handleChange: (x: any) => void) => [
                 <Text mb={8} fontWeight={800} fontSize={36} color="#f2f0ee">
                     CONTRATO ENEAS
                 </Text>
-                <Image src="/olive.svg" />
-                <Text fontSize={20} color="#f2f0ee">
+                <Image src="/circle-il.png" maxH="35vh" />
+                {/* <Text fontSize={20} color="#f2f0ee">
                     El contrato de arrendamiento automatizado más poderoso del
                     mercado.
-                </Text>
-                <Image
+                </Text> */}
+                {/* <Image
                     src="/olive.svg"
                     style={{ transform: "scaleX(-1)", marginBottom: "64px" }}
-                />
+                /> */}
                 <TextField
                     text="¿Como quieres llamar a este contrato?"
                     label="contractName"
