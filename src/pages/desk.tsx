@@ -281,7 +281,7 @@ const FormStepper = ({
             controls.start({
                 opacity: 1,
                 x: 0,
-                transition: { duration: "0.8", ease: "easeIn" },
+                transition: { duration: "0.15", ease: "easeIn" },
             });
         // controls.start({ scale: 2 });
         restartAnimation()
@@ -296,7 +296,7 @@ const FormStepper = ({
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -50 }}
-                    transition={{ duration: 0.8, ease: "easeIn" }}
+                    transition={{ duration: 0.15, ease: "easeIn" }}
                 >
                     {children}
                 </motion.div>
