@@ -127,6 +127,7 @@ export const Info = () => {
                         lineHeight={0.75}
                         textTransform={"uppercase"}
                         fontSize={128}
+                        fontFamily="Quattrocento"
                     >
                         {intToRoman(count)}.
                     </Text>
@@ -198,7 +199,9 @@ const Card = ({ title, subtitle, description, image }: CardProps) => {
 
                     <Divider w={"33%"} borderColor={"#FA7200"} />
 
-                    <Text fontSize={16}>{description}</Text>
+                    <Text fontSize={16} fontFamily="Quattrocento">
+                        {description}
+                    </Text>
                 </VStack>
                 <Image src={image} />
             </HStack>

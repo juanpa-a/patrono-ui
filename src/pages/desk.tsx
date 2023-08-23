@@ -8,6 +8,8 @@ import {
     Box,
     HStack,
     Divider,
+    Image,
+    IconButton,
 } from "@chakra-ui/react";
 import { motion, AnimatePresence, useAnimationControls } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -15,6 +17,8 @@ import { Button } from "~/components";
 import { Fancy } from "~/templates";
 import { ApiService } from "~/api";
 import { useUser } from "@clerk/clerk-react";
+// import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 
 export const Desk = () => {
     const [isDirty, setIsDirty] = useState(true);
@@ -73,7 +77,7 @@ export const Desk = () => {
     };
     const contractSteps = ContractFormSteps(handleChange);
     // eslint-disable-next-line @typescript-eslint/unbound-method
-    const { activeStep, goToNext } = useSteps({
+    const { activeStep, goToNext, goToPrevious } = useSteps({
         index: 0,
         count: contractSteps.length,
     });
@@ -160,28 +164,30 @@ export const Desk = () => {
                 <VStack pt="140px">
                     {activeStep < contractSteps.length - 1 ? (
                         <>
-                            {activeStep ? <Stack
-                                spacing={5}
-                                border="1px solid #FA7200"
-                                w="100%"
-                                borderRadius="full"
-                            >
-                                <Progress
-                                    colorScheme="orange"
-                                    size="lg"
-                                    // height={"24px"}
-                                    value={
-                                        (activeStep * 100) /
-                                        contractSteps.length
-                                    }
-                                    bgColor="#E7E4D8"
+                            {activeStep ? (
+                                <Stack
+                                    spacing={5}
+                                    border="1px solid #FA7200"
+                                    w="100%"
                                     borderRadius="full"
-                                />
-                            </Stack> : null}
+                                >
+                                    <Progress
+                                        colorScheme="orange"
+                                        size="lg"
+                                        value={
+                                            (activeStep * 100) /
+                                            contractSteps.length
+                                        }
+                                        bgColor="#E7E4D8"
+                                        borderRadius="full"
+                                    />
+                                </Stack>
+                            ) : null}
                             <AnimatePresence mode="wait">
                                 <FormStepper
                                     isDirty={isDirty}
                                     key={activeStep}
+                                    goToPrevious={goToPrevious}
                                     goToNext={goToNext}
                                     activeStep={activeStep}
                                     finalStep={contractSteps.length - 1}
@@ -195,10 +201,14 @@ export const Desk = () => {
                     )}
                 </VStack>
             </Fancy>
-            <Box w={"80vw"} position={"absolute"} bottom={16}>
+            <Box zIndex={1} w={"80vw"} position={"absolute"} bottom={16}>
                 <HStack alignItems={"end"}>
                     <VStack alignItems={"start"} w={"full"}>
-                        <Text textTransform={"uppercase"} fontWeight={700} color="#f2f0ee">
+                        <Text
+                            textTransform={"uppercase"}
+                            fontWeight={700}
+                            color="#f2f0ee"
+                        >
                             Patrono // 2023
                         </Text>
                         <Divider borderColor={"#FA7200"} />
@@ -208,10 +218,19 @@ export const Desk = () => {
                         textTransform={"uppercase"}
                         fontSize={128}
                         color="#f2f0ee"
+                        fontFamily="Quattrocento"
                     >
                         {intToRoman(activeStep + 1)}.
                     </Text>
                 </HStack>
+            </Box>
+            <Box bottom={25} left={"7.5vw"} position="absolute">
+                <Image
+                    zIndex={2}
+                    h={"35vh"}
+                    src="/two-face.png"
+                    fill="#E7E4D8"
+                />
             </Box>
         </VStack>
     );
@@ -264,34 +283,101 @@ const ContractSuccess = () => {
     );
 };
 
+// const FormStepper = ({
+//     goToNext,
+//     children,
+//     activeStep,
+//     finalStep,
+//     isDirty,
+// }: {
+//     goToNext: () => void;
+//     children: React.ReactNode;
+//     activeStep: number;
+//     finalStep: number;
+//     isDirty: boolean;
+// }) => {
+//     const controls = useAnimationControls();
+//     useEffect(() => {
+//         const restartAnimation = async (): Promise<unknown> =>
+//             controls.start({
+//                 opacity: 1,
+//                 x: 0,
+//                 transition: { duration: "0.15", ease: "easeIn" },
+//             });
+//         // controls.start({ scale: 2 });
+//         restartAnimation()
+//             .then(() => console.log(""))
+//             .catch(() => console.log(""));
+//     }, [controls]);
+//     return (
+//         <VStack p={16} minW={"50vw"}>
+//             <AnimatePresence mode="wait">
+//                 <motion.div
+//                     key={activeStep}
+//                     initial={{ opacity: 0, x: -50 }}
+//                     animate={{ opacity: 1, x: 0 }}
+//                     exit={{ opacity: 0, x: -50 }}
+//                     transition={{ duration: 0.15, ease: "easeIn" }}
+//                 >
+//                     {children}
+//                 </motion.div>
+//             </AnimatePresence>
+//             <motion.div animate={controls} style={{ opacity: 0, x: -50 }}>
+//                 <Button
+//                     disabled={isDirty}
+//                     text={`${
+//                         activeStep === 0
+//                             ? "Crear contrato"
+//                             : activeStep >= finalStep
+//                             ? "Terminar"
+//                             : "Siguiente"
+//                     }`}
+//                     onClick={goToNext}
+//                 />
+//             </motion.div>
+//         </VStack>
+//     );
+// };
+
 const FormStepper = ({
     goToNext,
+    goToPrevious,
     children,
     activeStep,
     finalStep,
     isDirty,
 }: {
     goToNext: () => void;
+    goToPrevious: () => void;
     children: React.ReactNode;
     activeStep: number;
     finalStep: number;
     isDirty: boolean;
 }) => {
     const controls = useAnimationControls();
+
     useEffect(() => {
-        const restartAnimation = async (): Promise<unknown> =>
-            controls.start({
+        const restartAnimation = async (): Promise<void> => {
+            await controls.start({
                 opacity: 1,
                 x: 0,
-                transition: { duration: "0.15", ease: "easeIn" },
+                transition: { duration: 0.15, ease: "easeIn" },
             });
-        // controls.start({ scale: 2 });
+        };
         restartAnimation()
             .then(() => console.log(""))
             .catch(() => console.log(""));
     }, [controls]);
+
     return (
-        <VStack p={16}  minW={"50vw"}>
+        <HStack p={16} minW={"50vw"} spacing={16}>
+            <IconButton
+                aria-label="Previous"
+                icon={<FiChevronLeft />}
+                onClick={goToPrevious}
+                isDisabled={activeStep === 0}
+            />
+
             <AnimatePresence mode="wait">
                 <motion.div
                     key={activeStep}
@@ -303,20 +389,16 @@ const FormStepper = ({
                     {children}
                 </motion.div>
             </AnimatePresence>
-            <motion.div animate={controls} style={{ opacity: 0, x: -50 }}>
-                <Button
-                    disabled={isDirty}
-                    text={`${
-                        activeStep === 0
-                            ? "Crear contrato"
-                            : activeStep >= finalStep
-                            ? "Terminar"
-                            : "Siguiente"
-                    }`}
+
+            {activeStep < finalStep && (
+                <IconButton
+                    aria-label="Next"
+                    icon={<FiChevronRight />}
                     onClick={goToNext}
+                    // isDisabled={isDirty}
                 />
-            </motion.div>
-        </VStack>
+            )}
+        </HStack>
     );
 };
 

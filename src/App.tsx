@@ -18,6 +18,10 @@ const theme = extendTheme({
             500: "#FA7200",
         },
     },
+    fonts: {
+        heading: `'Archivo', sans-serif`,
+        body: `'Archivo', sans-serif`,
+    },
 });
 
 export const App = () => {

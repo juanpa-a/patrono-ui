@@ -32,7 +32,11 @@ export const About = () => {
                     </Text>
                     <Divider w={32} color={"#E7E4D8"} />
                     <VStack spacing={4}>
-                        <Text color={"#E7E4D8"} fontSize={16}>
+                        <Text
+                            color={"#E7E4D8"}
+                            fontSize={16}
+                            fontFamily="Quattrocento"
+                        >
                             <i>Eneas</i>© es el contrato de arrendamiento que
                             hasta un cavernícola puede configurar de forma
                             sencilla, profesional y segura. Déjate llevar por
@@ -40,7 +44,11 @@ export const About = () => {
                             ideal para arrendar fincas habitacionales,
                             comerciales, industriales o rústicas.
                         </Text>
-                        <Text color={"#E7E4D8"} fontSize={16}>
+                        <Text
+                            color={"#E7E4D8"}
+                            fontSize={16}
+                            fontFamily="Quattrocento"
+                        >
                             Recuerda, basta con que respondas unas cuantas
                             preguntas para que el sistema de Patrono te ayude a
                             generar —en línea y de manera inmediata— un contrato
@@ -58,7 +66,7 @@ export const About = () => {
                         </Text>
                     </VStack>
                     <Divider w={32} color={"#E7E4D8"} />
-                    <VStack align={"start"} >
+                    <VStack align={"start"}>
                         <Button text="configurar" onClick={console.log} />
                         <CButton
                             variant="unstyled"

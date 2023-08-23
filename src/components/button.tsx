@@ -20,7 +20,7 @@ export const Button = ({
             disabled={disabled}
             colorScheme={"white"}
             size="md"
-            fontWeight="bold"
+            // fontWeight="semibold"
             border={"2px solid #FA7200"}
             borderRadius="full"
             minW="190px"
@@ -30,6 +30,8 @@ export const Button = ({
             backgroundColor={secondary ? "#FFFFFF00" : "#FA7200"}
             _hover={{ bg: "#FA7200" }}
             _disabled={{ opacity: 0.5, cursor: "not-allowed" }}
+            fontFamily="Archivo"
+            letterSpacing="2px"
         >
             {text}
         </ChakraButton>
