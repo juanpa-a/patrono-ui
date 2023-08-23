@@ -376,6 +376,7 @@ const FormStepper = ({
                 icon={<FiChevronLeft />}
                 onClick={goToPrevious}
                 isDisabled={activeStep === 0}
+                borderRadius={"full"}
             />
 
             <AnimatePresence mode="wait">
@@ -395,6 +396,7 @@ const FormStepper = ({
                     aria-label="Next"
                     icon={<FiChevronRight />}
                     onClick={goToNext}
+                    borderRadius={"full"}
                     // isDisabled={isDirty}
                 />
             )}
