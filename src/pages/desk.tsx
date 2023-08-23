@@ -397,7 +397,7 @@ const FormStepper = ({
                     icon={<FiChevronRight />}
                     onClick={goToNext}
                     borderRadius={"full"}
-                    // isDisabled={isDirty}
+                    isDisabled={isDirty}
                 />
             )}
         </HStack>
