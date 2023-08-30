@@ -369,6 +369,10 @@ const FormStepper = ({
             .catch(() => console.log(""));
     }, [controls]);
 
+    useEffect(() => {
+        console.log(isDirty)
+    }, [isDirty])
+
     return (
         <HStack p={16} minW={"50vw"} spacing={16}>
             <IconButton
@@ -397,7 +401,7 @@ const FormStepper = ({
                     icon={<FiChevronRight />}
                     onClick={goToNext}
                     borderRadius={"full"}
-                    isDisabled={isDirty}
+                    // isDisabled={isDirty}
                 />
             )}
         </HStack>
