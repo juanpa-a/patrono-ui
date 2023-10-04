@@ -224,7 +224,7 @@ export const Desk = () => {
                     </Text>
                 </HStack>
             </Box>
-            <Box bottom={25} left={-10} position="absolute">
+            <Box bottom={-35} left={-155} position="absolute">
                 <Image
                     zIndex={2}
                     h={"35vh"}
