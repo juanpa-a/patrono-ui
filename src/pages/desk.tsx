@@ -209,7 +209,7 @@ export const Desk = () => {
                             fontWeight={700}
                             color="#f2f0ee"
                         >
-                            Patrono // 2023
+                            Patrono // 2023 
                         </Text>
                         <Divider borderColor={"#FA7200"} />
                     </VStack>
