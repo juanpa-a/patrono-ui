@@ -39,7 +39,7 @@ export const LandlordRepresentative = ({
                 />
                 <SelectField
                     label="landlordIsMoralPerson"
-                    text="¿Actua en representación de una empresa u organización?"
+                    text="¿Actúa en representación de una empresa u organización?"
                     onChange={handleChange}
                     options={[
                         { value: "true", text: "Si" },
