@@ -25,7 +25,7 @@ export const TextField = ({
                 fontWeight="medium"
                 color={dark ? "#f2f0ee" : ""}
             >
-                <strong>{`${text}:`}</strong>
+                <strong>{`${text}:g`}</strong>
             </FormLabel>
             <Input
                 name={label}

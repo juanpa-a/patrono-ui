@@ -22,42 +22,42 @@ export const Property = ({
                 <TextField
                     text="Direccion"
                     label="propertyStreet"
-                    placeholder="Av. Siempreviva"
+                    placeholder="Calle Progreso"
                     setValue={handleChange}
                     dark
                 />
                 <TextField
                     text="Número exterior"
                     label="propertyOuterNumber"
-                    placeholder="2150"
+                    placeholder="25"
                     setValue={handleChange}
                     dark
                 />
                 <TextField
                     text="Número interior"
                     label="propertyInnerNumber"
-                    placeholder="42-B"
+                    placeholder=""
                     setValue={handleChange}
                     dark
                 />
                 <TextField
                     text="Código postal"
                     label="propertyInnerNumber"
-                    placeholder="42-B"
+                    placeholder="28450"
                     setValue={handleChange}
                     dark
                 />
                 <TextField
                     text="Estado"
                     label="propertyInnerNumber"
-                    placeholder="42-B"
+                    placeholder="Colima"
                     setValue={handleChange}
                     dark
                 />
                 <TextField
                     text="Municipio"
                     label="propertyInnerNumber"
-                    placeholder="42-B"
+                    placeholder="Comala"
                     setValue={handleChange}
                     dark
                 />
