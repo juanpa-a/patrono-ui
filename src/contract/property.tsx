@@ -12,9 +12,12 @@ export const Property = ({
             <Text fontWeight={800} fontSize={36} color="#f2f0ee">
                 ¿Cuál es el domicilio de la finca que se dará en arrendamiento?
             </Text>
-            <Text fontWeight={800} fontSize={16} color="#f2f0ee">
+            <Text fontWeight={500} fontSize={16} color="#f2f0ee" >
+                <i>
+
                 Detalle la ubicación de la casa, el departamento, el local, el
                 terreno o las construcciones que se darán arrendamiento.
+                </i>
             </Text>
             <section className="w-full">
                 <TextField

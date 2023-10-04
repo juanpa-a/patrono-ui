@@ -31,7 +31,7 @@ export const About = () => {
                         eneas
                     </Text>
                     <Divider w={32} color={"#E7E4D8"} />
-                    <VStack spacing={4}>
+                    <VStack spacing={4} >
                         <Text
                             color={"#E7E4D8"}
                             fontSize={16}

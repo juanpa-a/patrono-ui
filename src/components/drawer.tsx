@@ -8,7 +8,6 @@ import {
     Image,
     Box,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -54,10 +53,11 @@ export const Drawer = ({ isOpen, onClose }: Props) => {
                         justifyContent={"center"}
                         alignContent={"center"}
                         gap={"128px"}
+                        overflow={"hidden"}
                     >
-                        <motion.div whileHover={{ scale: 1.2 }}>
                             <VStack
                                 alignContent="center"
+                                overflow={"hidden"}
                                 onClick={() => {
                                     navigate("/create");
                                     onClose();
@@ -66,8 +66,6 @@ export const Drawer = ({ isOpen, onClose }: Props) => {
                                 <Image src="/desk.png" />
                                 <Center mt={3}>ESCRITORIO</Center>
                             </VStack>
-                        </motion.div>
-                        <motion.div whileHover={{ scale: 1.2 }}>
                             <VStack
                                 alignContent="center"
                                 onClick={() => {
@@ -78,13 +76,11 @@ export const Drawer = ({ isOpen, onClose }: Props) => {
                                 <Image src="/arch.png" />
                                 <Center mt={3}>ARCHIVO</Center>
                             </VStack>
-                        </motion.div>
-                        <motion.div whileHover={{ scale: 1.2 }}>
                             <VStack alignContent="center">
                                 <Image src="/obs.png" />
                                 <Center mt={3}>OBSERVATORIO</Center>
                             </VStack>
-                        </motion.div>
+
                     </DrawerBody>
                 </DrawerContent>
             </ChakraDrawer>
