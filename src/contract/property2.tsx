@@ -10,12 +10,12 @@ export const Property2 = ({
     return (
         <Box minW={"33vw"}>
             <Text fontWeight={800} fontSize={36} color="#f2f0ee">
-                ¿Cómo se encuentra y qué uso se le dará a la finca que se dará
+                ¿Cómo se encuentra y qué uso tendrá a la finca que se dará
                 en arrendamiento?
             </Text>
             <Text fontWeight={500} fontSize={16} color="#f2f0ee">
                 <i>
-                    Señale el estado y el destino que se le dará a la finca que
+                    Señale el estado y el destino que tendrá la finca que
                     se dará en arrendamiento.
                 </i>
             </Text>
