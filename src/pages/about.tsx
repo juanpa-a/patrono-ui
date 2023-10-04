@@ -37,12 +37,13 @@ export const About = () => {
                             fontSize={16}
                             fontFamily="Quattrocento"
                         >
-                            <i>Eneas</i>© es el contrato de arrendamiento mexicano que
-                            hasta un cavernícola puede configurar de forma
-                            sencilla, profesional y segura. Déjate llevar por
-                            nuestra potente tecnología y da forma a tu contrato
-                            ideal para arrendar fincas habitacionales,
-                            comerciales, industriales o rústicas.
+                            <i>Eneas</i>© es el contrato de arrendamiento
+                            mexicano que hasta un cavernícola puede configurar
+                            de forma sencilla, profesional y segura. Déjate
+                            llevar por nuestra potente tecnología y da forma a
+                            tu contrato ideal para arrendar fincas
+                            habitacionales, comerciales, industriales o
+                            rústicas.
                         </Text>
                         <Text
                             color={"#E7E4D8"}
@@ -67,7 +68,10 @@ export const About = () => {
                     </VStack>
                     <Divider w={32} color={"#E7E4D8"} />
                     <VStack align={"start"}>
-                        <Button text="configurar" onClick={console.log} />
+                        <Button
+                            text="configurar"
+                            onClick={() => navigate("/create")}
+                        />
                         <CButton
                             variant="unstyled"
                             onClick={() => navigate("/info")}

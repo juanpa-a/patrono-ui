@@ -55,7 +55,7 @@ export const Landing = () => {
                     <HStack spacing="20px">
                         <Button
                             text="Comenzar"
-                            onClick={() => navigate("/create")}
+                            onClick={() => navigate("/about")}
                         />
                     </HStack>
                 </VStack>
