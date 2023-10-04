@@ -37,7 +37,7 @@ export const About = () => {
                             fontSize={16}
                             fontFamily="Quattrocento"
                         >
-                            <i>Eneas</i>© es el contrato de arrendamiento que
+                            <i>Eneas</i>© es el contrato de arrendamiento mexicano que
                             hasta un cavernícola puede configurar de forma
                             sencilla, profesional y segura. Déjate llevar por
                             nuestra potente tecnología y da forma a tu contrato
@@ -59,7 +59,7 @@ export const About = () => {
                     </VStack>
                     <VStack align={"start"}>
                         <Text fontSize={32} color={"#FA7200"} fontWeight={700}>
-                            GRATIS
+                            $330.00 MXN
                         </Text>
                         <Text fontSize={12} color={"#E7E4D8"}>
                             *Por tiempo limitado.
