@@ -38,6 +38,13 @@ export const LandlordRepresentative = ({
                     dark
                 />
                 <SelectField
+                    label="landlordNationality"
+                    text="Nacionalidad"
+                    onChange={handleChange}
+                    options={[{ value: "MX", text: "México" }]}
+                    dark
+                />
+                <SelectField
                     label="landlordIsMoralPerson"
                     text="¿Actúa en representación de una empresa u organización?"
                     onChange={handleChange}
@@ -45,13 +52,6 @@ export const LandlordRepresentative = ({
                         { value: "true", text: "Si" },
                         { value: "false", text: "No" },
                     ]}
-                    dark
-                />
-                <SelectField
-                    label="landlordNationality"
-                    text="Nacionalidad"
-                    onChange={handleChange}
-                    options={[{ value: "MX", text: "México" }]}
                     dark
                 />
             </section>
