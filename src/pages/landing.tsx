@@ -55,11 +55,6 @@ export const Landing = () => {
                     <HStack spacing="20px">
                         <Button
                             text="Configurar"
-                            onClick={() => navigate("/create")}
-                        />
-                        <Button
-                            text="Descubrir"
-                            secondary
                             onClick={() => navigate("/about")}
                         />
                     </HStack>
