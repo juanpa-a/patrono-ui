@@ -36,7 +36,7 @@ export const Drawer = ({ isOpen, onClose }: Props) => {
     }, []);
     return (
         <Box overflow={"hidden"}>
-            <ChakraDrawer placement={"left"} onClose={onClose} isOpen={isOpen} overflow={"hidden"}>
+            <ChakraDrawer placement={"left"} onClose={onClose} isOpen={isOpen}>
                 <DrawerOverlay />
                 <DrawerContent
                     // bg={"#E7E4D8"}
@@ -46,6 +46,7 @@ export const Drawer = ({ isOpen, onClose }: Props) => {
                             : "rgba(224, 221, 207, 0.95)"
                     }
                     transition="background-color 0.4s ease"
+                    overflow={"hidden"}
                 >
                     <DrawerBody
                         display={"flex"}
