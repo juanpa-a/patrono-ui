@@ -8,6 +8,7 @@ import { Property } from "./property";
 import { Tenant } from "./tenant";
 
 import { TextField } from "../components/text.field";
+import { Property2 } from "./property2";
 
 export const ContractFormSteps = (handleChange: (x: any) => void) => [
     {
@@ -44,6 +45,11 @@ export const ContractFormSteps = (handleChange: (x: any) => void) => [
         title: "Propiedad",
         description: "",
         form: <Property handleChange={handleChange} />,
+    },
+    {
+        title: "Propiedad",
+        description: "",
+        form: <Property2 handleChange={handleChange} />,
     },
     {
         title: "Propietario",
