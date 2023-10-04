@@ -35,7 +35,7 @@ export const ContractFormSteps = (handleChange: (x: any) => void) => [
         form: (
             <VStack mx={"auto"} spacing={4} minW={"33vw"} minH={"100%"}>
                 <Text  fontWeight={800} fontSize={36} color="#f2f0ee">
-                    BREAK
+                    OBJETO DEL ARRENDAMIENTO
                 </Text>
             </VStack>
         ),
@@ -52,6 +52,18 @@ export const ContractFormSteps = (handleChange: (x: any) => void) => [
         form: <Property2 handleChange={handleChange} />,
     },
     {
+        title: "Break",
+        description: "",
+        form: (
+            <VStack mx={"auto"} spacing={4} minW={"33vw"} minH={"100%"}>
+                <Text  fontWeight={800} fontSize={36} color="#f2f0ee">
+                    GENERALES DEL PROPIETARIO E INQUILINO
+                </Text>
+            </VStack>
+        ),
+        // form: <LandlordRepresentative handleChange={handleChange} />,
+    },
+    {
         title: "Propietario",
         description: "",
         form: <LandlordRepresentative handleChange={handleChange} />,
@@ -65,6 +77,18 @@ export const ContractFormSteps = (handleChange: (x: any) => void) => [
         title: "Inquilino",
         description: "",
         form: <Tenant handleChange={handleChange} />,
+    },
+    {
+        title: "Break",
+        description: "",
+        form: (
+            <VStack mx={"auto"} spacing={4} minW={"33vw"} minH={"100%"}>
+                <Text  fontWeight={800} fontSize={36} color="#f2f0ee">
+                    CLAUSULADO
+                </Text>
+            </VStack>
+        ),
+        // form: <LandlordRepresentative handleChange={handleChange} />,
     },
     {
         title: "Configuración basica",
