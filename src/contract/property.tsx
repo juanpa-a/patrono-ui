@@ -36,7 +36,7 @@ export const Property = ({
                 <TextField
                     text="Número interior"
                     label="propertyInnerNumber"
-                    placeholder=""
+                    placeholder="(opcional)"
                     setValue={handleChange}
                     dark
                 />
