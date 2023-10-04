@@ -1,4 +1,4 @@
-import { TextField, SelectField } from "~/components";
+import { TextField } from "~/components";
 
 import { Box, Text } from "@chakra-ui/react";
 
