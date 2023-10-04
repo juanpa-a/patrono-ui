@@ -374,7 +374,7 @@ const FormStepper = ({
     }, [isDirty])
 
     return (
-        <HStack p={16} minW={"50vw"} spacing={16}>
+        <HStack p={16} minW={"50vw"} minH={"50vh"} spacing={16}>
             <IconButton
                 aria-label="Previous"
                 icon={<FiChevronLeft />}

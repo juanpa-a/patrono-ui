@@ -10,7 +10,11 @@ export const Property = ({
     return (
         <Box minW={"33vw"}>
             <Text fontWeight={800} fontSize={36} color="#f2f0ee">
-                CONTRATO ENEAS
+                ¿Cuál es el domicilio de la finca que se dará en arrendamiento?
+            </Text>
+            <Text fontWeight={800} fontSize={16} color="#f2f0ee">
+                Detalle la ubicación de la casa, el departamento, el local, el
+                terreno o las construcciones que se darán arrendamiento.
             </Text>
             <section className="w-full">
                 <TextField
@@ -36,7 +40,7 @@ export const Property = ({
                 />
                 <SelectField
                     label="propertyState"
-                    text="Estado de la propiedad"
+                    text="¿En qué condición se encuentra?"
                     onChange={handleChange}
                     options={[
                         { value: "BAD", text: "Malo" },
@@ -47,7 +51,7 @@ export const Property = ({
                 />
                 <SelectField
                     label="propertyUse"
-                    text="Que uso se le dara"
+                    text="¿Qué uso se le dará?"
                     onChange={handleChange}
                     options={[
                         { value: "RESIDENTIAL", text: "Residencial" },
@@ -57,7 +61,7 @@ export const Property = ({
                 />
                 <SelectField
                     label="propertyIsFurnished"
-                    text="La propiedad esta amueblada?"
+                    text="¿Incluirá mobiliario que deseé inventariar?"
                     onChange={handleChange}
                     options={[
                         { value: "false", text: "No" },

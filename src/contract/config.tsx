@@ -1,5 +1,6 @@
 import { Text, VStack, Image } from "@chakra-ui/react";
 import { BasicConfig } from "./basic";
+import { Basic2Config } from "./basic2";
 import { CustomConfig } from "./custom";
 import { LandlordBusiness } from "./landlordBusiness";
 import { LandlordRepresentative } from "./landlordRepresentative";
@@ -16,16 +17,9 @@ export const ContractFormSteps = (handleChange: (x: any) => void) => [
                     CONTRATO ENEAS
                 </Text>
                 <Image src="/olive.svg" />
-                {/* <Text fontSize={20} color="#f2f0ee">
-                    El contrato de arrendamiento automatizado más poderoso del
-                    mercado.
-                </Text>
-                <Image
-                    src="/olive.svg"
-                    style={{ transform: "scaleX(-1)", marginBottom: "64px" }}
-                /> */}
+
                 <TextField
-                    text="¿Como quieres llamar a este contrato?"
+                    text="¿Qué nombre le quieres dar al contrato?"
                     label="contractName"
                     placeholder="Mi contrato con Patrono"
                     setValue={handleChange}
@@ -33,6 +27,18 @@ export const ContractFormSteps = (handleChange: (x: any) => void) => [
                 />
             </VStack>
         ),
+    },
+    {
+        title: "Break",
+        description: "",
+        form: (
+            <VStack mx={"auto"} spacing={4} minW={"33vw"} minH={"100%"}>
+                <Text  fontWeight={800} fontSize={36} color="#f2f0ee">
+                    BREAK
+                </Text>
+            </VStack>
+        ),
+        // form: <LandlordRepresentative handleChange={handleChange} />,
     },
     {
         title: "Propiedad",
@@ -58,6 +64,11 @@ export const ContractFormSteps = (handleChange: (x: any) => void) => [
         title: "Configuración basica",
         description: "",
         form: <BasicConfig handleChange={handleChange} />,
+    },
+    {
+        title: "Configuración basica",
+        description: "",
+        form: <Basic2Config handleChange={handleChange} />,
     },
     {
         title: "Configuración personalizada",

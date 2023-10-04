@@ -28,7 +28,7 @@ export const BasicConfig = ({
                 />
                 <SelectField
                     label="paymentCycle"
-                    text="Cada cuanto se pagara la renta"
+                    text="¿Cada cuánto se pagará la renta?"
                     onChange={handleChange}
                     options={[
                         { value: "biweekly", text: "quincenal" },
@@ -37,14 +37,14 @@ export const BasicConfig = ({
                     dark
                 />
                 <TextField
-                    text="Monto de la renta"
+                    text="¿Cuánto se pagará?"
                     label="paymentAmount"
                     placeholder="$5,000"
                     setValue={handleChange}
                     dark
                 />
                 <SelectField
-                    text="Metodo de pago"
+                    text="¿Cómo se pagará?"
                     label="paymentMethod"
                     onChange={handleChange}
                     options={[
@@ -53,13 +53,7 @@ export const BasicConfig = ({
                     ]}
                     dark
                 />
-                <TextField
-                    text="Cantidad de deposito de garantia"
-                    label="paymentGuarantee"
-                    placeholder="$15,000"
-                    setValue={handleChange}
-                    dark
-                />
+
             </section>
         </Box>
     );

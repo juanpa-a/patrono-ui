@@ -28,7 +28,7 @@ export const Tenant = ({
                 />
                 <SelectField
                     label="tenantGender"
-                    text="Genero"
+                    text="¿Usted es varón o mujer?"
                     onChange={handleChange}
                     options={[
                         { value: "MALE", text: "Masculino" },
