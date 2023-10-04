@@ -16,13 +16,20 @@ export const LandlordRepresentative = ({
                 <TextField
                     text="Nombre"
                     label="landlordRepresentativeName"
-                    placeholder="Andrew"
+                    placeholder="Pedro"
+                    setValue={handleChange}
+                    dark
+                />
+                <TextField
+                    text="Apellido"
+                    label="landlordRepresentativeName"
+                    placeholder="Páramo"
                     setValue={handleChange}
                     dark
                 />
                 <SelectField
                     label="landlordRepresentativeGender"
-                    text="Genero"
+                    text="Género"
                     onChange={handleChange}
                     options={[
                         { value: "MALE", text: "Masculino" },
