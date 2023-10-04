@@ -20,7 +20,7 @@ export const Property = ({
             </Text>
             <section className="w-full">
                 <TextField
-                    text="Direccion:"
+                    text="Direccion"
                     label="propertyStreet"
                     placeholder="Av. Siempreviva"
                     setValue={handleChange}
