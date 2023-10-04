@@ -22,7 +22,7 @@ export const Property2 = ({
             <section className="w-full">
                 <SelectField
                     label="propertyState"
-                    text="¿Como se encuentra la finca que se dara en arrendamineto?"
+                    text="¿Comó se encuentra la finca que se dara en arrendamineto?"
                     onChange={handleChange}
                     options={[
                         { value: "BAD", text: "Malo" },
