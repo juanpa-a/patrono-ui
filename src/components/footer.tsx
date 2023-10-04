@@ -13,7 +13,7 @@ import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 export const Footer = () => {
     const [reveal, setReveal] = useState(false);
     return (
-        <VStack p={16} w="full" backgroundColor="#1E1E1E">
+        <VStack p={16} w="full" backgroundColor="#1E1E1E" zIndex={1}>
             <VStack w="full" maxW="1080px" mb="15px">
                 <Image src="/legal-logo.png" h={29} />
                 <Divider
